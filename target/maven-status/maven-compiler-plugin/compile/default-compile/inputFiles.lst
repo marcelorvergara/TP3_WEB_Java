@@ -1,0 +1,12 @@
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/BasicApplication.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/ControllerClass.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/persistence/repository/UserRepository.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/cep/model/BuscaCep.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/persistence/config/PersistenceJPAConfig.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/s3/config/AwsS3Config.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/s3/service/AwsS3Service.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/model/Usuario.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/cep/model/Endereco.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/persistence/service/UserService.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/persistence/service/UserServiceImpl.java
+/home/marcelo/Documentos/ADS/Java/JavaWEB/TP3/TP3Web/src/main/java/edu/infnet/cep/service/BuscaCepSvc.java

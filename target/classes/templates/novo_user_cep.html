@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Cadastro</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container mt-4" style="width: 590px">
+            <h2>Criar Usuário</h2>
+            <p>Carregar Foto</p>
+            <hr>
+            <form method="POST" th:object="${usuario}" th:action="@{/novo_user_final}" enctype="multipart/form-data"> 
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group" >
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome" required
+                                   aria-describedby="primeiro nome" placeholder="Primeiro Nome" 
+                                   th:value="${usuario.nome}"
+                                   th:field="*{nome}">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control" id="email" required
+                                   aria-describedby="email" placeholder="Email" 
+                                   th:value="${usuario.email}"
+                                   th:field="*{email}">
+                          </div>
+                          <div class="form-group">
+                            <label for="phone">Telefone:</label>
+                            <input type="text" class="form-control" id="phone" required
+                                   placeholder="Telefone" 
+                                   th:value="${usuario.phone}"
+                                   th:field="*{phone}">
+                          </div>
+                          <label for="cep">CEP:</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="cep" required
+                                   placeholder="CEP" 
+                                   th:value="${usuario.cep}"
+                                   th:field="*{cep}">
+                            <div class="input-group-append">
+                              <button class="btn btn-primary btn-secondary" type="submit" name="action" value="buscaCep">Buscar Endereço</button>   
+                            </div>
+                          </div>
+                          <div class="form-group mt-3">
+                            <label for="endereco">Endereço:</label>
+                            <input type="text" class="form-control" id="endereco"
+                                   placeholder="Endereço" 
+                                   th:value="${usuario.endereco}"
+                                   th:field="*{endereco}">
+                          </div>
+                          <div class="form-group mt-3">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" class="form-control" id="bairro"
+                                   placeholder="Bairro" 
+                                   th:value="${usuario.bairro}"
+                                   th:field="*{bairro}">
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="localidade">Cidade:</label>
+                            <input type="text" class="form-control" id="localidade"
+                                   placeholder="Localidade" 
+                                   th:value="${usuario.localidade}"
+                                   th:field="*{localidade}">
+                          </div>
+                          <div class="form-group mt-3">
+                            <label for="uf">Estado:</label>
+                            <input type="text" class="form-control" id="uf"
+                                   placeholder="UF" 
+                                   th:value="${usuario.uf}"
+                                   th:field="*{uf}">
+                          </div>
+                          <!--foto-->    
+                          <div class="row no-gutters">
+                              <div class="col">
+                                  <label class="btn btn-primary" for="my-file">
+                                  Procurar Foto
+                                  <input id="my-file" type="file" name="file" style="display:none"
+                                         onchange="$('#upload-file-info').text(this.files[0].name)">
+                                  </label>  
+                              </div>
+                              <div class="col">
+                                  <label class="btn btn-primary">
+                                  Enviar
+                                  <input type="submit" name="action" value="upload" hidden>
+                                  </label>  
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col">
+                                  <span  class='label label-info ml-2' id="upload-file-info"></span>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
