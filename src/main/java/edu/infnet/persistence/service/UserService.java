@@ -23,4 +23,6 @@ public interface UserService {
 
     public Optional<Usuario> findById(Long id);
 
+    public void deleteById(Long id);
+
 }

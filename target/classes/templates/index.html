@@ -34,7 +34,7 @@
                     <tr scope="row" th:each="user : ${usuariosLst}">
                         <td th:text="${user.nome} "/>
                         <td th:text="${user.email} "/>
-                        <td class="w-25"><img th:src="${user.foto}" class="img-fluid img-thumbnail" alt="fotito do indivíduo"> </td>
+                        <td class="w-25"><img style="width: 90px" th:src="${user.foto}" alt="fotito do indivíduo"> </td>
                         <td><a th:href="@{'/editar/' + ${user.id}}"> Alterar</a></td>
                         <td><a th:href="@{'/deletar/' + ${user.id}}"> Excluir</a></td>
                     </tr>

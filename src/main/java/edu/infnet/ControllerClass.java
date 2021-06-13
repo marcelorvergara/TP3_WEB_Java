@@ -195,4 +195,15 @@ public class ControllerClass {
         return "redirect:/";
     }
 
+    //deletar um user
+    @GetMapping("/deletar/{id}")
+    public String deletarUser(@PathVariable Long id) {
+
+        log.info("delete id: " + id);
+        userService.deleteById(id);
+
+        return "redirect:/";
+
+    }
+
 }
